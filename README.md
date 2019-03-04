@@ -1,18 +1,6 @@
-## django-rest-framework-boilerplate
-Simple boilerplate for django & django rest framework
+## django-rest-framework-boilerplate with swagger
+Simple boilerplate for django & django rest framework with swagger
 
-[![Build Status](https://travis-ci.org/p8ul/stackoverflow-lite-client.svg?branch=develop)](https://travis-ci.org/p8ul/stackoverflow-lite-client)
-[![Coverage Status](https://coveralls.io/repos/github/p8ul/django-rest-framework-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/p8ul/django-rest-framework-boilerplate?branch=master)
-[![Maintainability](https://api.codeclimate.com/v1/badges/e066442f75f4bc3f5269/maintainability)](https://codeclimate.com/github/p8ul/django-rest-framework-boilerplate/maintainability)
-
-### Tasks list
-- [x] Users api CRUD endpoints
-- [x] DRF JWT Authentication
-- [x] Add docker configurations
-- [ ] Document folder structure
-- [ ] Configure Static/media & templates
-- [ ] Integrate material ui & react js on templates
- 
 #### Jwt token endpoint
 Method | Endpoint | Functionanlity
 --- | --- | ---
@@ -22,8 +10,8 @@ POST | `/api-token-auth` | Request jwt token
 
 Method | Endpoint | Functionality
 --- | --- | ---
-POST | `/api/user` | List users
-GET | `/api/user/create` | Creates a user
+GET | `/api/user` | List users
+POST | `/api/user/create` | Creates a user
 GET | `/api/user/profile/{pk}` | Retrieve a user
 PUT | `/api/user/update/{pk}` | Edit a user
 DELETE | `/api/user/destroy/{pk}` | Delete a user
@@ -33,9 +21,9 @@ DELETE | `/api/user/destroy/{pk}` | Delete a user
 If you wish to run your own build, you two options
  1. User Docker compose.
     
-    `$ git clone https://github.com/p8ul/django-rest-framework-boilerplate`
+    `$ git clone git@github.com:Hafiz77/django-boilerplate-with-swagger.git`
     
-    `$ cd django-rest-framework-boilerplate`    
+    `$ cd django-boilerplate-with-swagger`    
     `$ docker-compose up`
  
  2. Without docker
@@ -44,27 +32,37 @@ First ensure you have python globally installed in your computer. If not, you ca
 
 After doing this, confirm that you have installed virtualenv globally as well. If not, run this:
 
-    $ pip install virtualenv
+`pip install virtualenv`
+
 Then, Git clone this repo to your PC
 
-    $ git clone https://github.com/p8ul/django-rest-framework-boilerplate
-    $ cd django-rest-framework-boilerplate
+ `git clone git@github.com:Hafiz77/django-boilerplate-with-swagger.git`
+
+
+`cd django-boilerplate-with-swagger`
+
 Create a virtual environment
 
-    $ virtualenv .venv && source .venv/bin/activate
+`python3 -m venv .venv && source .venv/bin/activate`
+
+
 Install dependancies
 
-    $ pip install -r requirements.txt
+`pip install -r requirements.txt`
+
 Make migrations & migrate
 
-    $ python manage.py makemigrations && python manage.py migrate
+`python3 ./manage.py makemigrations && python3 ./manage.py migrate`
 Create Super user
     
-    $ python manage.py createsuperuser
+`python3 manage.py createsuperuser`
 
 ### Launching the app
-    $ python manage.py runserver
+`python3 manage.py runserver`
 
 ### Run Tests
-    $ python manage.py test
+`python3 manage.py test`
 
+### Swagger API Documentation
+
+`http://localhost:8000/`
