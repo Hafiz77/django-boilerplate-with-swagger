@@ -4,30 +4,32 @@ Simple boilerplate for django & django rest framework with swagger
 #### Jwt token endpoint
 Method | Endpoint | Functionanlity
 --- | --- | ---
-POST | `/api-token-auth` | Request jwt token
+POST | `/api-token-auth/` | Request jwt token
 
 #### User Endpoints
 
 Method | Endpoint | Functionality
 --- | --- | ---
-GET | `/api/user` | List users
-POST | `/api/user/create` | Creates a user
-GET | `/api/user/profile/{pk}` | Retrieve a user
-PUT | `/api/user/update/{pk}` | Edit a user
-DELETE | `/api/user/destroy/{pk}` | Delete a user
+GET | `/api/users/` | List users
+POST | `/api/users/create/` | Creates a user
+GET | `/api/users/profile/{pk}/` | Retrieve a user
+PUT | `/api/users/update/{pk}/` | Edit a user
+DELETE | `/api/users/destroy/{pk}/` | Delete a user
 
 
 ### Installation 
 If you wish to run your own build, you two options
- 1. User Docker compose.
+
+## 1.User Docker compose.
     
-    `$ git clone git@github.com:Hafiz77/django-boilerplate-with-swagger.git`
+`git clone git@github.com:Hafiz77/django-boilerplate-with-swagger.git`
     
-    `$ cd django-boilerplate-with-swagger`    
-    `$ docker-compose up`
- 
- 2. Without docker
- 
+`cd django-boilerplate-with-swagger`
+
+`docker-compose up`
+
+## 2. Without docker
+
 First ensure you have python globally installed in your computer. If not, you can get python [here](python.org).
 
 After doing this, confirm that you have installed virtualenv globally as well. If not, run this:
@@ -36,7 +38,7 @@ After doing this, confirm that you have installed virtualenv globally as well. I
 
 Then, Git clone this repo to your PC
 
- `git clone git@github.com:Hafiz77/django-boilerplate-with-swagger.git`
+`git clone git@github.com:Hafiz77/django-boilerplate-with-swagger.git`
 
 
 `cd django-boilerplate-with-swagger`
@@ -53,8 +55,9 @@ Install dependancies
 Make migrations & migrate
 
 `python3 ./manage.py makemigrations && python3 ./manage.py migrate`
+
 Create Super user
-    
+
 `python3 manage.py createsuperuser`
 
 ### Launching the app

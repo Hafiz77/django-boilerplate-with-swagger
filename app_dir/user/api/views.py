@@ -1,6 +1,6 @@
 from rest_framework.generics import (
     ListAPIView, CreateAPIView, RetrieveUpdateAPIView,
-    RetrieveAPIView, DestroyAPIView
+    RetrieveAPIView, DestroyAPIView,UpdateAPIView
 )
 from django.db.models import Q
 from rest_framework import pagination
@@ -49,7 +49,7 @@ class UserDeleteAPIView(DestroyAPIView):
     serializer_class = UserSerializer
 
 
-class UpdateAPIView(RetrieveUpdateAPIView):
+class UpdateAPIView(UpdateAPIView):
     permission_classes = [IsAuthenticatedOrReadOnly]
     queryset = User.objects.all()
     serializer_class = UserSerializer

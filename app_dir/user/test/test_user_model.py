@@ -5,7 +5,7 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 
-class StudentTest(TestCase):
+class UserTest(TestCase):
     def setUp(self):
         self.data = {
             'username': 'Peter',
