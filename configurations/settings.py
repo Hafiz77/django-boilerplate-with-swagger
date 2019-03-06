@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 DEFAULT_APPS = (
+    'jet.dashboard',
+    'jet',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,7 +43,8 @@ DEFAULT_APPS = (
 
 EXTERNAL_APPS = (
     'rest_framework',
-    'rest_framework_swagger'
+    'rest_framework_swagger',
+    'simple_history'
 )
 
 LOCAL_APPS = (

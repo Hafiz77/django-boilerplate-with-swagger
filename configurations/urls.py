@@ -8,6 +8,8 @@ schema_view = get_swagger_view(title='Rest API')
 
 
 urlpatterns = [
+    url(r'^jet/', include('jet.urls', 'jet')),  # Django JET URLS
+    url(r'^jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest')),
     path('api-token-auth', obtain_jwt_token),
